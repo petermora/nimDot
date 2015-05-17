@@ -1,0 +1,34 @@
+digraph {
+graph [
+label = "system.nim & collections/*
+filtering for openArray";
+rankdir=LR;
+];
+node[color=coral, style=filled, label="openArray[T]" ] N0;
+node[color=coral, style=filled, label="T" ] N1;
+N0 -> N1 [color="green", label="items" ];
+node[color=coral, style=filled, label="tuple[key: int, val: T]" ] N2;
+N0 -> N2 [color="green", label="pairs" ];
+node[color=coral, style=filled, label="seq[T]" ] N3;
+N0 -> N3 [color="", label="`@`" ];
+node[color=coral, style=filled, label="bool" ] N4;
+N0 -> N4 [color="", label="contains(T)" ];
+node[color=coral, style=filled, label="S ): seq[S]" ] N5;
+N0 -> N5 [color="", label="each(proc (x)" ];
+N0 -> N5 [color="", label="map(proc (x)" ];
+node[color=coral, style=filled, label="openArray[string]" ] N6;
+node[color=coral, style=filled, label="cstringArray" ] N7;
+N6 -> N7 [color="", label="allocCStringArray" ];
+node[color=coral, style=filled, label="openArray[A]" ] N8;
+node[color=coral, style=filled, label="HashSet[A]" ] N9;
+N8 -> N9 [color="", label="toSet" ];
+node[color=coral, style=filled, label="OrderedSet[A]" ] N10;
+N8 -> N10 [color="", label="toOrderedSet" ];
+node[color=coral, style=filled, label="CountTable[A]" ] N11;
+N8 -> N11 [color="", label="toCountTable" ];
+node[color=coral, style=filled, label="CountTableRef[A]" ] N12;
+N8 -> N12 [color="", label="newCountTable" ];
+node[color=coral, style=filled, label="string" ] N13;
+N6 -> N13 [color="", label="join(string)" ];
+N6 -> N13 [color="", label="join" ];
+}

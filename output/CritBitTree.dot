@@ -1,0 +1,26 @@
+digraph {
+graph [
+label = "system.nim & collections/*
+filtering for CritBitTree";
+rankdir=LR;
+];
+node[color=coral, style=filled, label="CritBitTree[T]" ] N0;
+node[color=coral, style=filled, label="int" ] N1;
+N0 -> N1 [color="", label="len" ];
+node[color=coral, style=filled, label="bool" ] N2;
+N0 -> N2 [color="", label="contains(string)" ];
+N0 -> N2 [color="", label="hasKey(string)" ];
+node[color=coral, style=filled, label="T" ] N3;
+N0 -> N3 [color="", label="`[]`(string)" ];
+node[color=coral, style=filled, label="string" ] N4;
+N0 -> N4 [color="green", label="keys" ];
+N0 -> N3 [color="green", label="values" ];
+N0 -> N4 [color="green", label="items" ];
+node[color=coral, style=filled, label="tuple[key: string, val: T]" ] N5;
+N0 -> N5 [color="green", label="pairs" ];
+N0 -> N4 [color="green", label="itemsWithPrefix(string)" ];
+N0 -> N4 [color="green", label="keysWithPrefix(string)" ];
+N0 -> N3 [color="green", label="valuesWithPrefix(string)" ];
+N0 -> N5 [color="green", label="pairsWithPrefix(string)" ];
+N0 -> N4 [color="", label="`$`" ];
+}

@@ -1,0 +1,35 @@
+digraph {
+graph [
+label = "system.nim & collections/*
+filtering for CountTableRef";
+rankdir=LR;
+];
+node[color=coral, style=filled, label="CountTableRef[A]" ] N0;
+node[color=coral, style=filled, label="int" ] N1;
+N0 -> N1 [color="", label="len" ];
+node[color=coral, style=filled, label="(A, int)" ] N2;
+N0 -> N2 [color="green", label="pairs" ];
+node[color=coral, style=filled, label="(A, var int)" ] N3;
+N0 -> N3 [color="green", label="mpairs" ];
+node[color=coral, style=filled, label="A" ] N4;
+N0 -> N4 [color="green", label="keys" ];
+N0 -> N1 [color="green", label="values" ];
+node[color=coral, style=filled, label="var int" ] N5;
+N0 -> N5 [color="green", label="mvalues" ];
+N0 -> N1 [color="", label="`[]`(A)" ];
+N0 -> N5 [color="", label="mget(A)" ];
+node[color=coral, style=filled, label="bool" ] N6;
+N0 -> N6 [color="", label="hasKey(A)" ];
+node[color=coral, style=filled, label="" ] N7;
+N0 -> N7 [color="", label="`[]:=`(A, int)" ];
+N7 -> N0 [color="", label="newCountTable(initialSize=64)" ];
+node[color=coral, style=filled, label="openArray[A]" ] N8;
+N8 -> N0 [color="", label="newCountTable" ];
+node[color=coral, style=filled, label="string" ] N9;
+N0 -> N9 [color="", label="`$`" ];
+N0 -> N7 [color="", label="inc(A, val := 1)" ];
+N0 -> N2 [color="", label="smallest" ];
+N0 -> N2 [color="", label="largest" ];
+N0 -> N7 [color="", label="sort" ];
+N0 -> N7 [color="", label="merge(CountTableRef[A])" ];
+}

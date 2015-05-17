@@ -1,0 +1,39 @@
+digraph {
+graph [
+label = "system.nim & collections/*
+filtering for float";
+rankdir=LR;
+];
+node[color=coral, style=filled, label="float32" ] N0;
+N0 -> N0 [color="", label="`+` " ];
+N0 -> N0 [color="", label="`-` " ];
+N0 -> N0 [color="", label="`+` (float32)" ];
+N0 -> N0 [color="", label="`-` (float32)" ];
+N0 -> N0 [color="", label="`(float32)" ];
+N0 -> N0 [color="", label="`/` (float32)" ];
+node[color=coral, style=filled, label="float" ] N1;
+N1 -> N1 [color="", label="`+` " ];
+N1 -> N1 [color="", label="`-` " ];
+N1 -> N1 [color="", label="`+` (float)" ];
+N1 -> N1 [color="", label="`-` (float)" ];
+N1 -> N1 [color="", label="`(float)" ];
+N1 -> N1 [color="", label="`/` (float)" ];
+node[color=coral, style=filled, label="bool" ] N2;
+N0 -> N2 [color="", label="`==` (float32)" ];
+N0 -> N2 [color="", label="`<=` (float32)" ];
+N0 -> N2 [color="", label="`<`  (float32)" ];
+N1 -> N2 [color="", label="`==` (float)" ];
+N1 -> N2 [color="", label="`<=` (float)" ];
+N1 -> N2 [color="", label="`<`  (float)" ];
+node[color=coral, style=filled, label="int" ] N3;
+N3 -> N1 [color="", label="toFloat" ];
+N1 -> N3 [color="", label="toInt" ];
+node[color=coral, style=filled, label="string" ] N4;
+N1 -> N4 [color="", label="`$` " ];
+N1 -> N1 [color="", label="abs" ];
+N1 -> N1 [color="", label="min(float)" ];
+N1 -> N1 [color="", label="max(float)" ];
+N3 -> N1 [color="", label="`/`(int)" ];
+N4 -> N1 [color="", label="parseFloat" ];
+N1 -> N4 [color="", label="formatFloat(format: FloatFormatMode = ffDefault, precision: range[0..32] = 16)" ];
+}

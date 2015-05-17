@@ -1,0 +1,55 @@
+digraph {
+graph [
+label = "system.nim & collections/*
+filtering for seq";
+rankdir=LR;
+];
+node[color=coral, style=filled, label="" ] N0;
+node[color=coral, style=filled, label="seq[T]" ] N1;
+N0 -> N1 [color="", label="newSeq(len = 0.Natural)" ];
+node[color=coral, style=filled, label="int" ] N2;
+N1 -> N2 [color="", label="len" ];
+node[color=coral, style=filled, label="array[IDX, T]" ] N3;
+N3 -> N1 [color="", label="`@` " ];
+N1 -> N2 [color="", label="getRefcount" ];
+node[color=coral, style=filled, label="tuple[key: int, val: T]" ] N4;
+N1 -> N4 [color="green", label="pairs" ];
+node[color=coral, style=filled, label="bool" ] N5;
+N1 -> N5 [color="", label="isNil" ];
+node[color=coral, style=filled, label="openArray[T]" ] N6;
+N6 -> N1 [color="", label="`@`" ];
+N1 -> N1 [color="", label="`&` (seq[T])" ];
+N1 -> N1 [color="", label="`&` (T)" ];
+node[color=coral, style=filled, label="T" ] N7;
+N7 -> N1 [color="", label="`&` (seq[T])" ];
+N1 -> N5 [color="", label="`==` (seq[T])" ];
+node[color=coral, style=filled, label="string" ] N8;
+N1 -> N8 [color="", label="`$`" ];
+node[color=coral, style=filled, label="cstringArray" ] N9;
+node[color=coral, style=filled, label="seq[string]" ] N10;
+N9 -> N10 [color="", label="cstringArrayToSeq(Natural)" ];
+N9 -> N10 [color="", label="cstringArrayToSeq" ];
+node[color=coral, style=filled, label="array[Idx, T]" ] N11;
+N11 -> N1 [color="", label="`[]`(Slice[int])" ];
+N11 -> N1 [color="", label="`[]`(Slice[Idx])" ];
+N1 -> N1 [color="", label="`[]`(Slice[int])" ];
+N1 -> N7 [color="green", label="items" ];
+N1 -> N2 [color="", label="xlen" ];
+node[color=coral, style=filled, label="varargs[seq[T]]" ] N12;
+N12 -> N1 [color="", label="concat" ];
+N1 -> N1 [color="", label="repeat(Natural)" ];
+N1 -> N1 [color="", label="deduplicate" ];
+node[color=coral, style=filled, label="seq[S]" ] N13;
+node[color=coral, style=filled, label="seq[tuple[a: S, b: T]]" ] N14;
+N13 -> N14 [color="", label="zip(seq[T])" ];
+node[color=coral, style=filled, label="seq[seq[T]]" ] N15;
+N1 -> N15 [color="", label="distribute(Positive, spread = true)" ];
+node[color=coral, style=filled, label="bool ): T" ] N16;
+N1 -> N16 [color="green", label="filter(proc(item)" ];
+node[color=coral, style=filled, label="bool ): seq[T]" ] N17;
+N1 -> N17 [color="", label="filter(proc(item)" ];
+N8 -> N10 [color="", label="splitLines" ];
+N8 -> N10 [color="", label="split(seps: set[char] = Whitespace)" ];
+N8 -> N10 [color="", label="split(char)" ];
+N8 -> N10 [color="", label="split(string)" ];
+}

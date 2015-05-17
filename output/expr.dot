@@ -1,0 +1,43 @@
+digraph {
+graph [
+label = "system.nim & collections/*
+filtering for expr";
+rankdir=LR;
+];
+node[color=coral, style=filled, label="expr" ] N0;
+node[color=coral, style=filled, label="bool" ] N1;
+N0 -> N1 [color="", label="defined" ];
+N0 -> N1 [color="", label="declared" ];
+N0 -> N1 [color="", label="definedInScope" ];
+N0 -> N1 [color="", label="declaredInScope" ];
+node[color=coral, style=filled, label="typeDesc" ] N2;
+N0 -> N2 [color="", label="`type`" ];
+N0 -> N0 [color="blue", label="`!=` (expr)" ];
+N0 -> N0 [color="blue", label="`>=` (expr)" ];
+N0 -> N0 [color="blue", label="`>` (expr)" ];
+N0 -> N0 [color="blue", label="`in` (expr)" ];
+N0 -> N0 [color="blue", label="`notin` (expr)" ];
+N0 -> N0 [color="blue", label="`isnot` (expr)" ];
+N0 -> N0 [color="blue", label="`>=%` (expr)" ];
+N0 -> N0 [color="blue", label="`>%` (expr)" ];
+node[color=coral, style=filled, label="" ] N3;
+N0 -> N3 [color="blue", label="accumulateResult" ];
+node[color=coral, style=filled, label="typedesc" ] N4;
+N4 -> N0 [color="blue", label="newException(string)" ];
+N0 -> N0 [color="blue", label="`-|`(expr)" ];
+node[color=coral, style=filled, label="stmt" ] N5;
+N0 -> N5 [color="blue", label="onFailedAssert(stmt)" ];
+N0 -> N1 [color="", label="compiles" ];
+N0 -> N3 [color="", label="Call" ];
+N0 -> N0 [color="blue", label="`..^`(expr)" ];
+N0 -> N0 [color="blue", label="`..<`(expr)" ];
+N0 -> N0 [color="blue", label="filterIt(expr)" ];
+N0 -> N3 [color="blue", label="keepItIf(expr)" ];
+N0 -> N0 [color="blue", label="toSeq" ];
+N0 -> N0 [color="blue", label="foldl(expr)" ];
+N0 -> N0 [color="blue", label="foldr(expr)" ];
+N0 -> N0 [color="blue", label="mapIt(expr, expr)" ];
+N0 -> N3 [color="blue", label="mapIt(expr)" ];
+node[color=coral, style=filled, label="int" ] N6;
+N6 -> N0 [color="blue", label="newSeqWith(expr)" ];
+}
