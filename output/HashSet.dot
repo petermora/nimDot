@@ -1,7 +1,6 @@
 digraph {
 graph [
-label = "system.nim & collections/*
-filtering for HashSet";
+label = "Nim type map for HashSet";
 rankdir=LR;
 ];
 node[color=coral, style=filled, label="HashSet[A]" ] N0;

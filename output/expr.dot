@@ -1,7 +1,6 @@
 digraph {
 graph [
-label = "system.nim & collections/*
-filtering for expr";
+label = "Nim type map for expr";
 rankdir=LR;
 ];
 node[color=coral, style=filled, label="expr" ] N0;

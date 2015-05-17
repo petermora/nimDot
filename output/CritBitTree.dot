@@ -1,7 +1,6 @@
 digraph {
 graph [
-label = "system.nim & collections/*
-filtering for CritBitTree";
+label = "Nim type map for CritBitTree";
 rankdir=LR;
 ];
 node[color=coral, style=filled, label="CritBitTree[T]" ] N0;

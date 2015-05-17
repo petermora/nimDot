@@ -18,7 +18,7 @@ let raw = folders.map((p: string) =>
 proc createDot(filterFor: string) =
   var content = "digraph {\n"
   content.add("graph [\n")
-  content.add("label = \"system.nim & collections/*\nfiltering for " &
+  content.add("label = \"Nim type map for " &
     filterFor & "\";\n")
   content.add("rankdir=LR;\n")
   content.add("];\n")

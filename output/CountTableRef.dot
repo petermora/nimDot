@@ -1,7 +1,6 @@
 digraph {
 graph [
-label = "system.nim & collections/*
-filtering for CountTableRef";
+label = "Nim type map for CountTableRef";
 rankdir=LR;
 ];
 node[color=coral, style=filled, label="CountTableRef[A]" ] N0;

@@ -1,7 +1,6 @@
 digraph {
 graph [
-label = "system.nim & collections/*
-filtering for OrderedTableRef";
+label = "Nim type map for OrderedTableRef";
 rankdir=LR;
 ];
 node[color=coral, style=filled, label="OrderedTableRef[A, B]" ] N0;

@@ -1,7 +1,6 @@
 digraph {
 graph [
-label = "system.nim & collections/*
-filtering for seq";
+label = "Nim type map for seq";
 rankdir=LR;
 ];
 node[color=coral, style=filled, label="" ] N0;

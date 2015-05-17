@@ -1,7 +1,6 @@
 digraph {
 graph [
-label = "system.nim & collections/*
-filtering for TableRef";
+label = "Nim type map for TableRef";
 rankdir=LR;
 ];
 node[color=coral, style=filled, label="TableRef[A, B]" ] N0;

@@ -1,7 +1,6 @@
 digraph {
 graph [
-label = "system.nim & collections/*
-filtering for openArray";
+label = "Nim type map for openArray";
 rankdir=LR;
 ];
 node[color=coral, style=filled, label="openArray[T]" ] N0;

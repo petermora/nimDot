@@ -1,7 +1,6 @@
 digraph {
 graph [
-label = "system.nim & collections/*
-filtering for Table";
+label = "Nim type map for Table";
 rankdir=LR;
 ];
 node[color=coral, style=filled, label="Table[A, B]" ] N0;
